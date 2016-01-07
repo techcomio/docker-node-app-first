@@ -30,4 +30,21 @@ $ 192.168.99.100
 Open link [192.168.99.100:49160](http://192.168.99.100:49160)
 
 
+### Update source.
+change app.js
+
+1. Build
+```
+docker build -t <your username>/node-app-first .
+```
+2. Remove <CONTAINER ID>
+```
+docker kill `docker ps -q`
+```
+3. Start
+```
+docker run -p 49160:8080 -d <your username>/node-app-first
+```
+
+
 [Docker]:https://chrome.google.com
