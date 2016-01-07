@@ -29,6 +29,14 @@ $ 192.168.99.100
 ```
 Open link [192.168.99.100:49160](http://192.168.99.100:49160)
 
+When you're ready to stop your container, simply run:
+
+docker stop <container id>
+You can also start and restart it in the same way
+
+docker start <container id>
+
+docker restart <container id>
 
 ### Update source.
 change app.js
