@@ -19,6 +19,8 @@ docker build -t <your username>/node-app-first .
 ### Start
 ```
 docker run -p 49160:8080 -d <your username>/node-app-first
+docker ps
+docker logs <container id>
 ```
 
 ```
