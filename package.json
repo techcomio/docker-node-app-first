@@ -1,15 +1,23 @@
 {
   "name": "docker-node-app-first",
-  "version": "0.0.1",
-  "description": "Node.js app on Ubuntu using docker",
-  "author": "Ng Thong <ngthorg@gmail.com>",
-  "dependencies": {
-    "express": "^4.13.3"
-  },
+  "version": "0.0.2",
+  "description": "Building a Node.js App With Docker",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techcomio/docker-node-app-first.git"
   },
-  "license": "ISC"
+  "author": "ngthong <ngthorg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "koa": "^2.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-logger": "^2.0.0",
+    "koa-router": "^7.0.1"
+  }
 }

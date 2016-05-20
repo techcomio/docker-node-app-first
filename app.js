@@ -1,13 +1,23 @@
-var express = require('express')
+const http = require('http');
+const Koa = require('koa');
+const router = require('koa-router')();
+const logger = require('koa-logger');
 
-// Constants
-var PORT = 8080
+const port = process.env.PORT || 8080;
+const app = new Koa();
 
-// App
-var app = express()
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+router.use(logger());
 
-app.listen(PORT)
-console.log('Running on http://localhost:' + PORT)
+router.get('/', ctx => {
+  ctx.body = 'Hello World!';
+});
+
+app
+  .use(router.routes())
+  .use(router.allowedMethods());
+
+const server = http.createServer(app.callback());
+
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
